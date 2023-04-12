@@ -1,7 +1,7 @@
-<?php namespace Huddle\Zendesk\Providers;
+<?php namespace PlusTimeIT\Zendesk\Providers;
 
-use Huddle\Zendesk\Services\NullService;
-use Huddle\Zendesk\Services\ZendeskService;
+use PlusTimeIT\Zendesk\Services\NullService;
+use PlusTimeIT\Zendesk\Services\ZendeskService;
 use Illuminate\Support\ServiceProvider;
 
 class ZendeskServiceProvider extends ServiceProvider {

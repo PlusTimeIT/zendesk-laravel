@@ -1,4 +1,4 @@
-<?php namespace Huddle\Zendesk\Services;
+<?php namespace PlusTimeIT\Zendesk\Services;
 
 use Config, InvalidArgumentException, BadMethodCallException;
 use Zendesk\API\HttpClient;

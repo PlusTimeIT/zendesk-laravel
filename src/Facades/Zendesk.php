@@ -1,4 +1,4 @@
-<?php namespace Huddle\Zendesk\Facades;
+<?php namespace PlusTimeIT\Zendesk\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,5 +1,5 @@
 {
-    "name": "huddledigital/zendesk-laravel",
+    "name": "plustime-it/zendesk-laravel",
     "type": "library",
     "description": "Laravel wrapper for zendesk/zendesk_api_client_php package",
     "keywords": [
@@ -25,16 +25,16 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Huddle\\Zendesk\\Providers\\ZendeskServiceProvider"
+                "PlusTimeIT\\Zendesk\\Providers\\ZendeskServiceProvider"
             ],
             "aliases": {
-                "Zendesk": "Huddle\\Zendesk\\Facades\\Zendesk"
+                "Zendesk": "PlusTimeIT\\Zendesk\\Facades\\Zendesk"
             }
         }
     },
     "autoload": {
         "psr-4": {
-            "Huddle\\Zendesk\\": "src"
+            "PlusTimeIT\\Zendesk\\": "src"
         }
     },
     "minimum-stability": "stable"

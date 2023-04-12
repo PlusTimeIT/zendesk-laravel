@@ -1,5 +1,7 @@
 # Laravel Zendesk
 
+
+
 This package provides integration with the Zendesk API. It supports creating tickets, retrieving and updating tickets, deleting tickets, etc.
 
 The package simply provides a `Zendesk` facade that acts as a wrapper to the [zendesk/zendesk_api_client_php](https://github.com/zendesk/zendesk_api_client_php) package.
@@ -11,7 +13,7 @@ The package simply provides a `Zendesk` facade that acts as a wrapper to the [ze
 You can install this package via Composer using:
 
 ```bash
-composer require huddledigital/zendesk-laravel
+composer require plustime-it/zendesk-laravel
 ```
 
 You must also install the service provider.
@@ -22,7 +24,7 @@ You must also install the service provider.
 // config/app.php
 'providers' => [
     ...
-    Huddle\Zendesk\Providers\ZendeskServiceProvider::class,
+    PlusTimeIT\Zendesk\Providers\ZendeskServiceProvider::class,
     ...
 ];
 ```
@@ -33,7 +35,7 @@ If you want to make use of the facade you must install it as well.
 // config/app.php
 'aliases' => [
     ..
-    'Zendesk' => Huddle\Zendesk\Facades\Zendesk::class,
+    'Zendesk' => PlusTimeIT\Zendesk\Facades\Zendesk::class,
 ];
 ```
 
@@ -43,7 +45,7 @@ If you want to make use of the facade you must install it as well.
 To publish the config file to `app/config/zendesk-laravel.php` run:
 
 ```bash
-php artisan vendor:publish --provider="Huddle\Zendesk\Providers\ZendeskServiceProvider"
+php artisan vendor:publish --provider="PlusTimeIT\Zendesk\Providers\ZendeskServiceProvider"
 ```
 
 
@@ -97,12 +99,12 @@ Zendesk::ticket(123)->delete();
 
 ### Dependency injection
 
-If you'd prefer not to use the facade, you can skip adding the alias to `config/app.php` and instead inject `Huddle\Zendesk\Services\ZendeskService` into your class. You can then use all of the same methods on this object as you would on the facade.
+If you'd prefer not to use the facade, you can skip adding the alias to `config/app.php` and instead inject `PlusTimeIT\Zendesk\Services\ZendeskService` into your class. You can then use all of the same methods on this object as you would on the facade.
 
 ```php
 <?php
 
-use Huddle\Zendesk\Services\ZendeskService;
+use PlusTimeIT\Zendesk\Services\ZendeskService;
 
 class MyClass {
 

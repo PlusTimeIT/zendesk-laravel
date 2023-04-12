@@ -1,15 +1,16 @@
-<?php namespace Huddle\Zendesk\Services;
+<?php
+namespace PlusTimeIT\Zendesk\Services;
 
 use Illuminate\Support\Facades\Log;
 
-class NullService {
-
+class NullService
+{
     /**
      * @var bool
      */
     private $logCalls;
 
-    public function __construct(bool $logCalls = false)
+    public function __construct(bool $logCalls = FALSE)
     {
         $this->logCalls = $logCalls;
     }
@@ -17,9 +18,9 @@ class NullService {
     public function __call($name, $arguments)
     {
         if ($this->logCalls) {
-            Log::debug('Called Huddle Zendesk facade method: '.$name.' with:', $arguments);
+            Log::debug('Called PlusTimeIT Zendesk facade method: ' . $name . ' with:', $arguments);
 
-            return new self;
+            return new self();
         }
 
         return $this;
